@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ginlemon.sltheme.example"
+    android:installLocation="internalOnly"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="5"
+        android:targetSdkVersion="16" /> 
+
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.faketouch"
+        android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/appname" >
+<!-- 	UNCOMMENT THIS ACTIVITY IF YOU'D LIKE TO INSTALL A WIZARD TO APPLY YOUR THEME ↓ -->
+<!--         <activity -->
+<!--             android:name="ginlemon.sltheme.helper" -->
+<!--             android:label="@string/appname"  > -->
+<!--             <intent-filter> -->
+<!--                 <action android:name="android.intent.action.MAIN" /> -->
+<!--                 <category android:name="android.intent.category.LAUNCHER" /> -->
+<!--             </intent-filter> -->
+<!--         </activity> -->
+<!-- 	UNCOMMENT THIS ACTIVITY IF YOU'D LIKE TO INSTALL A WIZARD TO APPLY YOUR THEME ↑ -->
+        <activity android:name="ginlemon.sltheme.main" >
+            <intent-filter>
+                <action android:name="ginlemon.smartlauncher.THEMES" />
+                <!-- Delete if you don't want to set a new bubble background -->
+                <action android:name="ginlemon.smartlauncher.BUBBLESTYLE" />
+                <!-- Delete if you don't want to set a new bubble icons theme -->
+                <action android:name="ginlemon.smartlauncher.BUBBLEICONS" />
+                <!-- Delete if you don't want to set a clock theme -->
+                <action android:name="ginlemon.smartlauncher.CLOCKS" />
+                <action android:name="ginlemon.smartlauncher.CLOCKFONTS" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
